@@ -10,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
  
 
 @Entity
@@ -25,7 +24,7 @@ public class Genre implements Serializable{
 	
 	private Long id;
 	private String name;
-	
+
 	@OneToMany(mappedBy = "genre")
 	private List <Game> games = new ArrayList<>();
 	

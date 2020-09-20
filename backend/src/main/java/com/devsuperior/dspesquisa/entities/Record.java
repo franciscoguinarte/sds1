@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+ 
 
 @Entity
 @Table(name = "tb_record")
@@ -23,6 +24,7 @@ public class Record  implements Serializable{
 	private String name;
 	private Integer age;
 	private Instant moment;
+	
 	
 	@ManyToOne
 	@JoinColumn(name = "game_id")

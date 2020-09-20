@@ -19,9 +19,7 @@ import com.devsuperior.dspesquisa.entities.enums.Platform;
 @Entity
 @Table(name = "tb_game")
 public class Game implements Serializable{
-	/**
-	 * 
-	 */
+ 
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -30,10 +28,11 @@ public class Game implements Serializable{
 	private String title;
 	private Platform platform;
 	
+ 
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
 	private Genre genre;
-	
+ 
 	@OneToMany(mappedBy = "game")
 	private List<Record> records = new ArrayList<>();
 	
